@@ -1,0 +1,14 @@
+#container {
+  margin: 3% 5% 5% 5%;
+}
+#nav {
+  margin: 0 0 20px 0;
+}
+#new-assignment {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.icon-right {
+  float: right;
+  margin: 2px;
+}
