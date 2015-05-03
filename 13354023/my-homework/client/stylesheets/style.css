@@ -4,11 +4,24 @@
 #nav {
   margin: 0 0 20px 0;
 }
-#new-assignment {
+#new-assignment-button {
   text-align: center;
   margin: 0 0 20px 0;
 }
 .icon-right {
   float: right;
   margin: 2px;
+}
+.icon-left {
+  float: left;
+  margin-right: 5px;
+}
+.panel-heading {
+  cursor: pointer;
+}
+table, th, tr, td {
+  text-align: center;
+}
+input {
+  float: left;
 }

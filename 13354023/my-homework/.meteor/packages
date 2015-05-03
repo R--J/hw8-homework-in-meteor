@@ -11,3 +11,7 @@ twbs:bootstrap
 underscore
 mquandalle:jade
 dessix:livescript-compiler
+rajit:bootstrap3-datepicker
+tsega:bootstrap3-datetimepicker
+jquery
+momentjs:moment
