@@ -3,10 +3,18 @@
 }
 #nav {
   margin: 0 0 20px 0;
+  cursor: pointer;
 }
 #new-assignment-button {
   text-align: center;
   margin: 0 0 20px 0;
+}
+.glyphicon {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.glyphicon:hover {
+  transform: scale(1.2, 1.2);
 }
 .icon-right {
   float: right;

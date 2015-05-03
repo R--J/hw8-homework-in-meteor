@@ -5,6 +5,7 @@ Nav =
       Nav.titles[title-id].onclick = !->
         Nav.activate-title-and-its-area title-id
         Nav.disactivate-other-titles-and-their-area title-id
+    $(Nav.titles[0]).trigger('click')
 
   activate-title-and-its-area: (id) !->
     $(Nav.titles[id]).addClass 'active'
@@ -21,10 +22,23 @@ Nav =
       case 1 then $('#submission').hide!
       case 2 then $('#profile').hide!
 
-Meteor.startup ->
-  Nav.initialize!
-  console.log
+set-datetimepicker = !->
   $('#assignment-due').datetimepicker({
     format: 'YY/M/D HH:mm'
     minDate: moment()
   })
+
+set-panel = !->
+  headings = $('.panel-heading')
+  for let heading in headings
+    heading.onclick = !->
+      contents = $(@).nextAll!
+      for content in contents
+        if $(content).is ':visible' then $(content).hide!
+        else $(content).show!
+
+
+Meteor.startup ->
+  Nav.initialize!
+  set-datetimepicker!
+  set-panel!

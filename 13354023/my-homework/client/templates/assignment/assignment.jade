@@ -1,0 +1,47 @@
+template(name="assignment")
+  #assignment
+    #new-assignment-button
+      button.btn.btn-primary.btn-lg(type="button", data-toggle="modal", data-target="#new-assignment-modal") 
+        span.glyphicon.glyphicon-plus
+        | New Assignment
+
+    #new-assignment-modal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+              span(aria-hidden="true")&times;
+            h4.modal-title Edit Assignment
+          .modal-body
+            form.form-horizontal#new-assignment-form
+              .form-group
+                label.col-sm-2.control-label Topic
+                .col-sm-10
+                  input(type="text", class="form-control", id="assignment-topic", placeholder="e.g. Software Improvement Homework 08")
+              .form-group
+                label.col-sm-2.control-label Requirement
+                .col-sm-10
+                  textarea(class="form-control", id="assignment-requirement", placeholder="e.g. Read...", rows="10")
+              .form-group
+                label.col-sm-2.control-label Due Time
+                .col-sm-10
+                  input(type='text', class="form-control", id="assignment-due", placeholder="15/05/01 09:00")
+          .modal-footer
+            button(type="button", class="btn btn-default", data-dismiss="modal") Close
+            button(type="button", class="btn btn-primary") Submit
+
+
+    
+
+    .panel.panel-default
+      .panel-heading
+        span.glyphicon.glyphicon-inbox
+        | A
+        span.glyphicon.glyphicon-chevron-down.icon-right
+      .panel-body
+        h3 Topic
+        p asdf
+        h3 Requirement
+        p asdf
+        h3 Due Time
+        p sadfadsfasd
