@@ -30,18 +30,8 @@ template(name="assignment")
             button(type="button", class="btn btn-default", data-dismiss="modal") Close
             button(type="button", class="btn btn-primary") Submit
 
-
+    each ongoing
+      +assignment_ongoing
     
-
-    .panel.panel-default
-      .panel-heading
-        span.glyphicon.glyphicon-inbox
-        | A
-        span.glyphicon.glyphicon-chevron-down.icon-right
-      .panel-body
-        h3 Topic
-        p asdf
-        h3 Requirement
-        p asdf
-        h3 Due Time
-        p sadfadsfasd
+    each archived
+      +assignment_archived

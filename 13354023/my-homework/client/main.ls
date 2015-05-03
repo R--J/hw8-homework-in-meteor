@@ -32,10 +32,14 @@ set-panel = !->
   headings = $('.panel-heading')
   for let heading in headings
     heading.onclick = !->
-      contents = $(@).nextAll!
+      contents = $(@).next!
       for content in contents
-        if $(content).is ':visible' then $(content).hide!
-        else $(content).show!
+        if $(content).is ':visible'
+          $(content).hide!
+          $(content).parent!).children('table')[0].hide!
+        else 
+          $(content).show!
+          $($(content).parent!).children('table')[0].show!
 
 
 Meteor.startup ->
