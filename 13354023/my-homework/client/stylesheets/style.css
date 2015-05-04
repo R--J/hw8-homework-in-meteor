@@ -9,6 +9,12 @@
   text-align: center;
   margin: 0 0 20px 0;
 }
+.panel-body {
+  word-wrap: break-word;
+}
+.panel-body h3{
+  margin-top: -3px;
+}
 .glyphicon {
   transition: all 0.5s;
   cursor: pointer;

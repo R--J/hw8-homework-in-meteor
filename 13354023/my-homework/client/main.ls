@@ -36,13 +36,19 @@ set-panel = !->
       for content in contents
         if $(content).is ':visible'
           $(content).hide!
-          $(content).parent!).children('table')[0].hide!
+          $($(content).parent!).children('table').hide!
+          $(@).children('.glyphicon-chevron-up').addClass('glyphicon-chevron-down')
+          $(@).children('.glyphicon-chevron-up').removeClass('glyphicon-chevron-up')
         else 
           $(content).show!
-          $($(content).parent!).children('table')[0].show!
+          $($(content).parent!).children('table').show!
+          $(@).children('.glyphicon-chevron-down').addClass('glyphicon-chevron-up')
+          $(@).children('.glyphicon-chevron-down').removeClass('glyphicon-chevron-down')
+    $(heading).trigger('click')
+
 
 
 Meteor.startup ->
-  Nav.initialize!
   set-datetimepicker!
   set-panel!
+  Nav.initialize!

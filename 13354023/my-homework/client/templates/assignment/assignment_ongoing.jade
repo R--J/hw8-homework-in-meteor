@@ -1,14 +1,17 @@
 template(name="assignment_ongoing")
   .panel.panel-info.assignment-ongoing
-  .panel-heading
-    span.glyphicon.glyphicon-tasks
-    | a
-    span.glyphicon.glyphicon-chevron-down.icon-right
-    span.glyphicon.glyphicon-edit.icon-right(data-toggle="modal", data-target="#new-assignment-modal")
-  .panel-body
-    h3 Topic
-    p b
-    h3 Requirement
-    p c
-    h3 Due Time
-    p d
+    .panel-heading
+      span.glyphicon.glyphicon-tasks
+      | #{topic} - Professor W - #{due}
+      span.glyphicon.glyphicon-chevron-down.icon-right
+      span.glyphicon.glyphicon-edit.icon-right.assignment-modify(data-toggle="modal", data-target="#new-assignment-modal")
+    .panel-body
+      h3.assignment-topic #{topic}
+      strong Assigned by
+      p Professor ...
+      strong Last modified 
+      p 15/05/02 09:00
+      strong Requirement
+      p #{requirement} 
+      strong Due on
+      p #{due}

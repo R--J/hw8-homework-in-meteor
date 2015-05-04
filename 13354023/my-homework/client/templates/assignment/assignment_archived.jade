@@ -2,12 +2,15 @@ template(name="assignment_archived")
   .panel.panel-default
     .panel-heading
       span.glyphicon.glyphicon-inbox
-      | 
+      | #{topic} - Professor W - #{due}
       span.glyphicon.glyphicon-chevron-down.icon-right
     .panel-body
-      h3 Topic
-      p 
-      h3 Requirement
-      p 
-      h3 Due Time
-      p 
+      h3 #{topic}
+      strong Assigned by
+      p Professor ...
+      strong Last modified 
+      p 15/05/02 09:00
+      strong Requirement
+      p #{requirement} 
+      strong Due on
+      p #{due}
